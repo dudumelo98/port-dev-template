@@ -15,7 +15,11 @@ import {
   Users,
   LightbulbIcon,
   Sparkles,
-  BookOpen
+  BookOpen,
+  FileCode,
+  PaintBucket,
+  Globe,
+  Boxes
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ParticleSystem from '@/components/ParticleSystem';
@@ -51,7 +55,7 @@ const Index: React.FC = () => {
   
   const experienceData = [
     {
-      date: '2024 - Atual',
+      date: '2024 - Atual | 2 anos',
       title: 'Especialista em Inovação Educacional',
       company: 'Escolas Municipais ETI',
       description: [
@@ -62,7 +66,7 @@ const Index: React.FC = () => {
       ]
     },
     {
-      date: '2018 - 2025',
+      date: '2018 - 2025 | 7 anos',
       title: 'Coordenador de Operações Acadêmicas',
       company: 'Universidade Estadual do Maranhão',
       description: [
@@ -108,12 +112,12 @@ const Index: React.FC = () => {
   ];
 
   const technicalSkills = [
-    { name: 'Estrutura HTML', level: 90 },
-    { name: 'Técnicas de estilo CSS', level: 85 },
-    { name: 'Funcionalidade JavaScript', level: 80 },
-    { name: 'Python para desenvolvimento web', level: 75 },
-    { name: 'Princípios de UI/UX', level: 85 },
-    { name: 'Figma', level: 70 }
+    { name: 'Estrutura HTML', icon: <FileCode size={20} /> },
+    { name: 'Técnicas de estilo CSS', icon: <PaintBucket size={20} /> },
+    { name: 'Funcionalidade JavaScript', icon: <Code size={20} /> },
+    { name: 'Python para desenvolvimento web', icon: <Globe size={20} /> },
+    { name: 'Princípios de UI/UX', icon: <Layout size={20} /> },
+    { name: 'Figma', icon: <Boxes size={20} /> }
   ];
   
   return (
@@ -128,7 +132,7 @@ const Index: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 md:pr-8"
           >
-            <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-4 font-mono text-[#64ffda] uppercase">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-4 font-mono text-[#64ffda] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#64ffda] to-[#64daff] font-sans">
               Duilio Melo
             </h1>
             <h2 className="text-xl md:text-2xl mb-4 text-[#64ffda]">
@@ -162,7 +166,7 @@ const Index: React.FC = () => {
           >
             <div className="relative w-[180px] h-[180px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
-                src="/profile-photo.png"
+                src="/lovable-uploads/792c4e2a-c785-46f9-bd44-5f7f983886a2.png"
                 alt="Duilio Melo"
                 aspectRatio="square"
                 className="w-full h-full object-cover"
@@ -226,13 +230,14 @@ const Index: React.FC = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   className="w-full"
                 >
-                  <div className="flex justify-between mb-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[#64ffda]">{skill.icon}</span>
                     <span className="text-[#ccd6f6]">{skill.name}</span>
                   </div>
                   <div className="w-full bg-[#495670]/30 h-2 rounded-full overflow-hidden">
                     <div 
                       className="bg-[#64ffda] h-full rounded-full" 
-                      style={{ width: `${skill.level}%` }}
+                      style={{ width: '80%' }}
                     />
                   </div>
                 </motion.div>
