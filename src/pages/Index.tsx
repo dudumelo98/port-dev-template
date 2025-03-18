@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -24,18 +23,13 @@ import TimelineItem from '@/components/TimelineItem';
 import ContactLink from '@/components/ContactLink';
 import SmoothImage from '@/components/SmoothImage';
 
-// Add framer-motion dependency
-import { lov-add-dependency } from 'framer-motion@10.17.3';
-
 const Index: React.FC = () => {
-  // Smooth scroll to section when hash changes
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash) {
         const element = document.querySelector(hash);
         if (element) {
-          // Add a small delay to allow page to render fully
           setTimeout(() => {
             window.scrollTo({
               top: element.getBoundingClientRect().top + window.scrollY - 100,
@@ -54,7 +48,6 @@ const Index: React.FC = () => {
     };
   }, []);
   
-  // Experience timeline data
   const experienceData = [
     {
       date: '2022 - Present',
@@ -82,7 +75,6 @@ const Index: React.FC = () => {
     }
   ];
   
-  // Skills data
   const skillsData = [
     {
       title: 'Frontend Development',
@@ -124,10 +116,8 @@ const Index: React.FC = () => {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Background particles */}
       <ParticleSystem />
       
-      {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="section-container relative z-10">
           <div className="max-w-3xl">
@@ -170,7 +160,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Skills Section */}
       <section id="skills" className="py-20 md:py-32 relative">
         <div className="section-container">
           <motion.div
@@ -209,7 +198,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Experience Section */}
       <section id="experience" className="py-20 md:py-32 relative bg-secondary/50">
         <div className="section-container">
           <motion.div
@@ -250,7 +238,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Contact Section */}
       <section id="contact" className="py-20 md:py-32 relative">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
