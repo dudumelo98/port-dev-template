@@ -113,7 +113,7 @@ const Index: React.FC = () => {
     { name: 'Funcionalidade JavaScript', level: 80 },
     { name: 'Python para desenvolvimento web', level: 75 },
     { name: 'Princípios de UI/UX', level: 85 },
-    { name: 'Dicas de design do Figma', level: 70 }
+    { name: 'Figma', level: 70 }
   ];
   
   return (
@@ -128,11 +128,11 @@ const Index: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 md:pr-8"
           >
-            <h1 className="heading-xl mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-4 font-mono text-[#64ffda] uppercase">
               Duilio Melo
             </h1>
             <h2 className="text-xl md:text-2xl mb-4 text-[#64ffda]">
-              Especialista em Educação & Tecnologia
+              Gestor em Tecnologia da Informação
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
               Profissional na intersecção entre tecnologia e educação com comprovada expertise em transformação digital de ecossistemas educacionais
@@ -160,7 +160,7 @@ const Index: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="flex-1 flex justify-center mt-10 md:mt-0"
           >
-            <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+            <div className="relative w-[180px] h-[180px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
                 src="/profile-photo.png"
                 alt="Duilio Melo"
@@ -228,7 +228,6 @@ const Index: React.FC = () => {
                 >
                   <div className="flex justify-between mb-1">
                     <span className="text-[#ccd6f6]">{skill.name}</span>
-                    <span className="text-[#64ffda]">{skill.level}%</span>
                   </div>
                   <div className="w-full bg-[#495670]/30 h-2 rounded-full overflow-hidden">
                     <div 
