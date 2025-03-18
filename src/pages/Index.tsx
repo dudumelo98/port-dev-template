@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -10,8 +11,11 @@ import {
   Mail,
   Layers,
   CloudCog,
-  Search,
-  LineChart
+  GraduationCap,
+  Users,
+  LightbulbIcon,
+  Sparkles,
+  BookOpen
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ParticleSystem from '@/components/ParticleSystem';
@@ -47,50 +51,69 @@ const Index: React.FC = () => {
   
   const experienceData = [
     {
-      date: '2022 - Present',
-      title: 'Senior Software Engineer',
-      company: 'TechInnovate Inc.',
-      description: 'Led development of cloud-native applications using React, Node.js, and AWS. Implemented CI/CD pipelines and mentored junior developers.'
+      date: '2024 - Atual',
+      title: 'Especialista em Inovação Educacional',
+      company: 'Escolas Municipais ETI',
+      description: [
+        'Liderança de projetos pedagógicos digitais impactando +1.6k alunos',
+        'Capacitação de 120+ professores em metodologias ágeis de ensino híbrido',
+        'Desenvolvimento de plataforma de aprendizagem adaptativa (aumento de 40% no engajamento discente)',
+        'Parcerias estratégicas com EdTechs para modernização de infraestrutura tecnológica'
+      ]
     },
     {
-      date: '2020 - 2022',
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      description: 'Developed scalable web applications with modern JavaScript frameworks. Collaborated with design team to create intuitive user interfaces.'
-    },
-    {
-      date: '2018 - 2020',
-      title: 'Frontend Developer',
-      company: 'CreativeWeb Agency',
-      description: 'Created responsive websites and interactive web experiences. Optimized performance and accessibility across multiple platforms.'
-    },
-    {
-      date: '2017 - 2018',
-      title: 'Web Developer Intern',
-      company: 'StartUp Hub',
-      description: 'Assisted in building web applications and learned modern development practices. Contributed to open source projects.'
+      date: '2018 - 2025',
+      title: 'Coordenador de Operações Acadêmicas',
+      company: 'Universidade Estadual do Maranhão',
+      description: [
+        'Gestão de polo educacional com excelência operacional (98% de satisfação discente)',
+        'Transformação digital de ecossistemas educacionais',
+        'Gestão de operações acadêmicas de alta complexidade',
+        'Desenvolvimento de soluções pedagógicas escaláveis'
+      ]
     }
   ];
   
   const skillsData = [
     {
-      title: 'Infrastructure Management',
-      description: 'Cloud Computing · Virtualization · DevOps',
-      icon: <CloudCog size={36} />,
-      tags: ['AWS', 'Azure', 'Docker', 'Kubernetes']
+      title: 'Gestão de Projetos Educacionais',
+      description: 'Capacidade de liderar e coordenar iniciativas educacionais com excelência operacional',
+      icon: <GraduationCap size={36} />,
+      tags: ['Planejamento', 'Execução', 'Monitoramento', 'Avaliação']
     },
     {
-      title: 'Development',
-      description: 'HTML · CSS · JavaScript · Python',
+      title: 'Inovação e Integração Tecnológica',
+      description: 'Implementação de soluções digitais para melhorar processos educacionais',
+      icon: <Sparkles size={36} />,
+      tags: ['EdTech', 'Transformação Digital', 'Automação', 'Análise de Dados']
+    },
+    {
+      title: 'Colaboração e Parcerias',
+      description: 'Criação de alianças estratégicas para potencializar resultados educacionais',
+      icon: <Users size={36} />,
+      tags: ['Networking', 'Parcerias', 'Colaboração', 'Comunicação']
+    },
+    {
+      title: 'Desenvolvimento Web',
+      description: 'Criação de plataformas educacionais e sistemas de aprendizagem',
       icon: <Code size={36} />,
-      tags: ['React', 'Node.js', 'Python', 'TypeScript']
+      tags: ['HTML', 'CSS', 'JavaScript', 'Python']
     },
     {
-      title: 'Web Design',
-      description: 'Figma · UI/UX · Prototyping',
-      icon: <Layers size={36} />,
-      tags: ['UI/UX Design', 'Figma', 'Design Systems', 'Animation']
+      title: 'Formação e Capacitação',
+      description: 'Treinamento e desenvolvimento de educadores em metodologias inovadoras',
+      icon: <BookOpen size={36} />,
+      tags: ['Workshops', 'Mentoria', 'Treinamentos', 'Feedback']
     }
+  ];
+
+  const technicalSkills = [
+    { name: 'Estrutura HTML', level: 90 },
+    { name: 'Técnicas de estilo CSS', level: 85 },
+    { name: 'Funcionalidade JavaScript', level: 80 },
+    { name: 'Python para desenvolvimento web', level: 75 },
+    { name: 'Princípios de UI/UX', level: 85 },
+    { name: 'Dicas de design do Figma', level: 70 }
   ];
   
   return (
@@ -109,10 +132,10 @@ const Index: React.FC = () => {
               Duilio Melo
             </h1>
             <h2 className="text-xl md:text-2xl mb-4 text-[#64ffda]">
-              IT Manager & Full-Stack Developer
+              Especialista em Educação & Tecnologia
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
-              Transforming ideas into innovative technological solutions
+              Profissional na intersecção entre tecnologia e educação com comprovada expertise em transformação digital de ecossistemas educacionais
             </p>
             
             <div className="flex flex-wrap gap-4 mt-8">
@@ -120,13 +143,13 @@ const Index: React.FC = () => {
                 href="#contact"
                 className="bg-transparent border border-[#64ffda] text-[#64ffda] px-6 py-3 hover:bg-[#64ffda]/10 transition-all duration-300"
               >
-                Get in touch
+                Entre em contato
               </a>
               <a 
                 href="#skills"
                 className="bg-transparent border border-[#64ffda] text-[#64ffda] px-6 py-3 hover:bg-[#64ffda]/10 transition-all duration-300"
               >
-                View skills
+                Ver competências
               </a>
             </div>
           </motion.div>
@@ -137,10 +160,10 @@ const Index: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="flex-1 flex justify-center mt-10 md:mt-0"
           >
-            <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+            <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
-                alt="Profile Photo"
+                src="/profile-photo.png"
+                alt="Duilio Melo"
                 aspectRatio="square"
                 className="w-full h-full object-cover"
               />
@@ -158,8 +181,11 @@ const Index: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16 text-center"
           >
-            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Skills</p>
-            <h2 className="heading-lg mb-6">Technical Expertise</h2>
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Competências</p>
+            <h2 className="heading-lg mb-6">Competências Destacadas</h2>
+            <p className="text-[#ccd6f6]/80 max-w-2xl mx-auto">
+              Combinando experiência em educação e tecnologia para criar soluções inovadoras
+            </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,6 +207,39 @@ const Index: React.FC = () => {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="mt-20"
+          >
+            <h3 className="heading-sm mb-6 text-center">Conhecimentos Técnicos</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              {technicalSkills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, width: 0 }}
+                  whileInView={{ opacity: 1, width: "100%" }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  className="w-full"
+                >
+                  <div className="flex justify-between mb-1">
+                    <span className="text-[#ccd6f6]">{skill.name}</span>
+                    <span className="text-[#64ffda]">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-[#495670]/30 h-2 rounded-full overflow-hidden">
+                    <div 
+                      className="bg-[#64ffda] h-full rounded-full" 
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
       
@@ -193,8 +252,12 @@ const Index: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16"
           >
-            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Career</p>
-            <h2 className="heading-lg mb-6">Professional Experience</h2>
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Carreira</p>
+            <h2 className="heading-lg mb-6">Experiência Profissional</h2>
+            <p className="text-[#ccd6f6]/80 max-w-2xl">
+              Trajetória profissional focada na interseção entre educação e tecnologia, 
+              desenvolvendo soluções inovadoras para ambientes de aprendizagem.
+            </p>
           </motion.div>
           
           <div className="space-y-2">
@@ -229,15 +292,18 @@ const Index: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16 text-center"
           >
-            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Connect</p>
-            <h2 className="heading-lg mb-6">Get in Touch</h2>
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Conecte-se</p>
+            <h2 className="heading-lg mb-6">Entre em Contato</h2>
+            <p className="text-[#ccd6f6]/80 max-w-md mx-auto">
+              Interessado em colaborar em projetos educacionais inovadores? Entre em contato!
+            </p>
           </motion.div>
           
           <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
             <ContactLink 
-              href="mailto:contact@example.com" 
+              href="mailto:dudumelo@gmail.com" 
               icon={<Mail size={20} />} 
-              label="contact@example.com"
+              label="dudumelo@gmail.com"
               className="border border-[#64ffda]/20 hover:border-[#64ffda] text-[#64ffda]"
             />
             <ContactLink 
@@ -258,7 +324,7 @@ const Index: React.FC = () => {
       
       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
         <motion.a
-          href="mailto:contact@example.com"
+          href="mailto:dudumelo@gmail.com"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}

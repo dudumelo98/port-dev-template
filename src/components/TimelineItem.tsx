@@ -6,7 +6,7 @@ interface TimelineItemProps {
   date: string;
   title: string;
   company: string;
-  description: string;
+  description: string[];
   isLast?: boolean;
   index: number;
 }
@@ -88,7 +88,14 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         >
           <h3 className="heading-sm mb-1">{title}</h3>
           <h4 className="text-lg font-medium text-[#64ffda] mb-3">{company}</h4>
-          <p className="text-[#ccd6f6]/80">{description}</p>
+          <ul className="space-y-2">
+            {description.map((point, i) => (
+              <li key={i} className="text-[#ccd6f6]/80 flex items-start">
+                <span className="text-[#64ffda] mr-2">▸</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
