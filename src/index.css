@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 217 76% 11%;
+    --foreground: 220 29% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 217 76% 17%;
+    --card-foreground: 220 29% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 217 76% 17%;
+    --popover-foreground: 220 29% 85%;
 
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 76% 11%;
+    --primary-foreground: 220 29% 85%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 169 100% 70%;
+    --secondary-foreground: 220 29% 85%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 217 30% 30%;
+    --muted-foreground: 220 29% 70%;
 
-    --accent: 216 34% 62%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 220 21% 36%;
+    --accent-foreground: 220 29% 85%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 220 29% 85%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 84% 48%;
+    --border: 220 21% 36%;
+    --input: 220 21% 36%;
+    --ring: 169 100% 70%;
 
     --radius: 0.75rem;
   }
@@ -54,7 +54,7 @@
 
 @layer components {
   .glass {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-sm;
+    @apply bg-accent/10 backdrop-blur-lg border border-accent/20 shadow-sm;
   }
   
   .glass-dark {
@@ -101,7 +101,7 @@
   .subtle-shine::after {
     @apply absolute top-0 -right-full w-1/2 h-full z-10;
     content: '';
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent);
+    background: linear-gradient(to right, transparent, rgba(100,255,218,0.15), transparent);
     animation: shine 3s infinite;
   }
   
@@ -146,42 +146,23 @@
   }
 }
 
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 @font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.gstatic.com/s/sf-pro-display/v1/SFProDisplay-Regular.woff2') format('woff2');
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.gstatic.com/s/sf-pro-display/v1/SFProDisplay-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.gstatic.com/s/sf-pro-display/v1/SFProDisplay-Semibold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.gstatic.com/s/sf-pro-display/v1/SFProDisplay-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SF Mono';
-  src: url('https://fonts.gstatic.com/s/sf-mono/v1/SFMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

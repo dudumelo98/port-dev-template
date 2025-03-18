@@ -5,13 +5,10 @@ import {
   Briefcase, 
   Layout, 
   Database, 
-  Sparkles, 
   Github, 
   Linkedin, 
   Mail,
   Layers,
-  Monitor,
-  Cpu,
   CloudCog,
   Search,
   LineChart
@@ -77,107 +74,95 @@ const Index: React.FC = () => {
   
   const skillsData = [
     {
-      title: 'Frontend Development',
-      description: 'Creating beautiful, responsive user interfaces with modern frameworks and design systems.',
-      icon: <Layout size={36} />,
-      tags: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js']
+      title: 'Infrastructure Management',
+      description: 'Cloud Computing · Virtualization · DevOps',
+      icon: <CloudCog size={36} />,
+      tags: ['AWS', 'Azure', 'Docker', 'Kubernetes']
     },
     {
-      title: 'Backend Development',
-      description: 'Building robust, scalable server applications and APIs with modern technologies.',
-      icon: <Database size={36} />,
-      tags: ['Node.js', 'Express', 'PostgreSQL', 'GraphQL']
+      title: 'Development',
+      description: 'HTML · CSS · JavaScript · Python',
+      icon: <Code size={36} />,
+      tags: ['React', 'Node.js', 'Python', 'TypeScript']
     },
     {
       title: 'Web Design',
-      description: 'Designing intuitive user experiences and visually appealing interfaces with attention to detail.',
+      description: 'Figma · UI/UX · Prototyping',
       icon: <Layers size={36} />,
       tags: ['UI/UX Design', 'Figma', 'Design Systems', 'Animation']
-    },
-    {
-      title: 'DevOps',
-      description: 'Streamlining development workflows and infrastructure with automation and CI/CD.',
-      icon: <CloudCog size={36} />,
-      tags: ['Docker', 'AWS', 'CI/CD', 'Kubernetes']
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'Enhancing application speed and efficiency through strategic optimizations.',
-      icon: <LineChart size={36} />,
-      tags: ['Web Vitals', 'Lighthouse', 'Bundle Analysis', 'Caching']
-    },
-    {
-      title: 'Testing & QA',
-      description: 'Ensuring application reliability and quality through comprehensive testing strategies.',
-      icon: <Search size={36} />,
-      tags: ['Jest', 'Cypress', 'TDD', 'E2E Testing']
     }
   ];
   
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#0a192f] text-[#ccd6f6]">
       <ParticleSystem />
       
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        <div className="section-container relative z-10">
-          <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="caption mb-3 text-accent">Portfolio</p>
-              <h1 className="heading-xl mb-6">
-                Crafting digital experiences with precision.
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl">
-                Software engineer specializing in creating elegant, user-centered solutions 
-                for complex problems.
-              </p>
-            </motion.div>
+      <section className="min-h-screen relative flex items-center px-[10%] py-16 md:py-0">
+        <div className="section-container relative z-10 flex flex-col md:flex-row items-center">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex-1 md:pr-8"
+          >
+            <h1 className="heading-xl mb-4">
+              Duilio Melo
+            </h1>
+            <h2 className="text-xl md:text-2xl mb-4 text-[#64ffda]">
+              IT Manager & Full-Stack Developer
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
+              Transforming ideas into innovative technological solutions
+            </p>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="#contact"
-                  className="glass-card bg-accent text-white px-6 py-3 hover:bg-accent/90 hover:shadow-lg transition-all duration-300"
-                >
-                  Get in touch
-                </a>
-                <a 
-                  href="#skills"
-                  className="glass-card px-6 py-3 hover:bg-primary/5 hover:shadow-lg transition-all duration-300"
-                >
-                  Explore skills
-                </a>
-              </div>
-            </motion.div>
-          </div>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <a 
+                href="#contact"
+                className="bg-transparent border border-[#64ffda] text-[#64ffda] px-6 py-3 hover:bg-[#64ffda]/10 transition-all duration-300"
+              >
+                Get in touch
+              </a>
+              <a 
+                href="#skills"
+                className="bg-transparent border border-[#64ffda] text-[#64ffda] px-6 py-3 hover:bg-[#64ffda]/10 transition-all duration-300"
+              >
+                View skills
+              </a>
+            </div>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="flex-1 flex justify-center mt-10 md:mt-0"
+          >
+            <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+              <SmoothImage
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                alt="Profile Photo"
+                aspectRatio="square"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
       
-      <section id="skills" className="py-20 md:py-32 relative">
+      <section id="skills" className="py-20 relative">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="mb-16 text-center max-w-2xl mx-auto"
+            className="mb-16 text-center"
           >
-            <p className="caption mb-3 text-accent">Expertise</p>
-            <h2 className="heading-lg mb-6">Skills & Competencies</h2>
-            <p className="text-muted-foreground">
-              A comprehensive collection of technical skills and domains of expertise,
-              refined through years of professional experience.
-            </p>
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Skills</p>
+            <h2 className="heading-lg mb-6">Technical Expertise</h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillsData.map((skill, index) => (
               <motion.div
                 key={index}
@@ -191,6 +176,7 @@ const Index: React.FC = () => {
                   description={skill.description}
                   icon={skill.icon}
                   tags={skill.tags}
+                  className="bg-[#495670]/20 hover:border-[#64ffda]/30 border border-transparent"
                 />
               </motion.div>
             ))}
@@ -198,7 +184,7 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      <section id="experience" className="py-20 md:py-32 relative bg-secondary/50">
+      <section id="experience" className="py-20 relative">
         <div className="section-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -207,20 +193,16 @@ const Index: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16"
           >
-            <p className="caption mb-3 text-accent">Career</p>
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Career</p>
             <h2 className="heading-lg mb-6">Professional Experience</h2>
-            <p className="text-muted-foreground max-w-2xl">
-              A chronological journey through my professional career, highlighting key roles,
-              responsibilities, and achievements.
-            </p>
           </motion.div>
           
           <div className="space-y-2">
             {experienceData.map((experience, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-100px" }}
               >
@@ -238,60 +220,75 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      <section id="contact" className="py-20 md:py-32 relative">
+      <section id="contact" className="py-20 relative">
         <div className="section-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <p className="caption mb-3 text-accent">Connect</p>
-              <h2 className="heading-lg mb-6">Get in Touch</h2>
-              <p className="text-muted-foreground mb-10 max-w-lg">
-                Interested in working together or have a question? Feel free to reach out 
-                through any of the channels below.
-              </p>
-              
-              <div className="flex flex-col gap-4 max-w-md">
-                <ContactLink 
-                  href="mailto:contact@example.com" 
-                  icon={<Mail size={20} />} 
-                  label="contact@example.com"
-                />
-                <ContactLink 
-                  href="https://github.com/" 
-                  icon={<Github size={20} />} 
-                  label="GitHub"
-                />
-                <ContactLink 
-                  href="https://linkedin.com/" 
-                  icon={<Linkedin size={20} />} 
-                  label="LinkedIn"
-                />
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, margin: "-100px" }}
-              className="flex items-center justify-center lg:justify-end"
-            >
-              <div className="max-w-sm w-full">
-                <SmoothImage
-                  src="https://images.unsplash.com/photo-1551649445-48959d272bf6?q=80&w=1000&auto=format&fit=crop"
-                  alt="Contact visual"
-                  aspectRatio="portrait"
-                  className="rounded-2xl shadow-xl rotate-1 animate-float"
-                />
-              </div>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="mb-16 text-center"
+          >
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Connect</p>
+            <h2 className="heading-lg mb-6">Get in Touch</h2>
+          </motion.div>
+          
+          <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
+            <ContactLink 
+              href="mailto:contact@example.com" 
+              icon={<Mail size={20} />} 
+              label="contact@example.com"
+              className="border border-[#64ffda]/20 hover:border-[#64ffda] text-[#64ffda]"
+            />
+            <ContactLink 
+              href="https://github.com/" 
+              icon={<Github size={20} />} 
+              label="GitHub"
+              className="border border-[#64ffda]/20 hover:border-[#64ffda] text-[#64ffda]"
+            />
+            <ContactLink 
+              href="https://linkedin.com/" 
+              icon={<Linkedin size={20} />} 
+              label="LinkedIn"
+              className="border border-[#64ffda]/20 hover:border-[#64ffda] text-[#64ffda]"
+            />
           </div>
         </div>
       </section>
+      
+      <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+        <motion.a
+          href="mailto:contact@example.com"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="w-12 h-12 rounded-full bg-[#64ffda] text-[#0a192f] flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        >
+          <Mail size={20} />
+        </motion.a>
+        <motion.a
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+          className="w-12 h-12 rounded-full bg-[#64ffda] text-[#0a192f] flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        >
+          <Github size={20} />
+        </motion.a>
+        <motion.a
+          href="https://linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
+          className="w-12 h-12 rounded-full bg-[#64ffda] text-[#0a192f] flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        >
+          <Linkedin size={20} />
+        </motion.a>
+      </div>
     </div>
   );
 };

@@ -48,7 +48,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`glass-card p-6 overflow-hidden rotate-3d ${className}`}
+      className={`p-6 overflow-hidden rounded-lg rotate-3d transition-all duration-300 ${className}`}
       style={{
         transform: `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) scale(${isHovered ? 1.02 : 1})`,
         transition: isHovered ? 'transform 0.1s ease-out' : 'transform 0.3s ease-out',
@@ -59,21 +59,21 @@ const SkillCard: React.FC<SkillCardProps> = ({
     >
       <div className="relative z-10">
         <div 
-          className={`mb-4 text-accent transition-all duration-300 ${isHovered ? 'scale-110 text-accent' : ''}`}
+          className={`mb-4 text-[#64ffda] transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}
           style={{ transformStyle: 'preserve-3d', transform: 'translateZ(20px)' }}
         >
           {icon}
         </div>
         
         <h3 
-          className="heading-sm mb-2"
+          className="heading-sm mb-2 text-white"
           style={{ transformStyle: 'preserve-3d', transform: 'translateZ(15px)' }}
         >
           {title}
         </h3>
         
         <p 
-          className="text-muted-foreground mb-6"
+          className="text-[#ccd6f6]/80 mb-6"
           style={{ transformStyle: 'preserve-3d', transform: 'translateZ(10px)' }}
         >
           {description}
@@ -87,7 +87,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
             <Badge 
               key={index} 
               variant="outline" 
-              className={`transition-all duration-300 ${isHovered ? 'bg-accent/10' : ''}`}
+              className={`transition-all duration-300 border-[#64ffda]/30 text-[#64ffda] ${isHovered ? 'bg-[#64ffda]/10' : ''}`}
             >
               {tag}
             </Badge>
@@ -97,10 +97,10 @@ const SkillCard: React.FC<SkillCardProps> = ({
       
       {/* Card glow effect */}
       <div 
-        className={`absolute inset-0 rounded-2xl transition-opacity duration-300 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+        className={`absolute inset-0 rounded-lg transition-opacity duration-300 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'}`}
         style={{ 
-          boxShadow: `0 0 40px 2px rgba(100, 150, 220, 0.15), 
-                     inset 0 0 40px 2px rgba(100, 150, 220, 0.05)`,
+          boxShadow: `0 0 40px 2px rgba(100, 255, 218, 0.15), 
+                     inset 0 0 40px 2px rgba(100, 255, 218, 0.05)`,
         }}
       />
     </div>

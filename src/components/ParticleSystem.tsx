@@ -31,19 +31,19 @@ const ParticleSystem: React.FC = () => {
     };
     
     const createParticles = () => {
-      const particleCount = Math.min(Math.floor(window.innerWidth / 10), 100);
+      const particleCount = Math.min(Math.floor(window.innerWidth / 10), 80);
       particlesRef.current = [];
       
       for (let i = 0; i < particleCount; i++) {
         particlesRef.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 2 + 0.5,
-          color: `hsla(${210 + Math.random() * 30}, 100%, 70%, 0.8)`,
-          speedX: Math.random() * 0.5 - 0.25,
-          speedY: Math.random() * 0.5 - 0.25,
+          size: Math.random() * 3 + 1,
+          color: '#64ffda',
+          speedX: Math.random() * 1 - 0.5,
+          speedY: Math.random() * 1 - 0.5,
           life: 0.5 + Math.random() * 0.5,
-          opacity: 0.1 + Math.random() * 0.4,
+          opacity: 0.3 + Math.random() * 0.2,
         });
       }
     };
@@ -88,8 +88,8 @@ const ParticleSystem: React.FC = () => {
       });
       
       // Draw connections
-      ctx.globalAlpha = 0.15;
-      ctx.strokeStyle = 'rgb(100, 150, 220)';
+      ctx.globalAlpha = 0.1;
+      ctx.strokeStyle = '#64ffda';
       ctx.lineWidth = 0.5;
       
       for (let i = 0; i < particlesRef.current.length; i++) {
@@ -115,6 +115,22 @@ const ParticleSystem: React.FC = () => {
       mouseRef.current.y = e.clientY;
     };
     
+    const handleClick = (e: MouseEvent) => {
+      // Add particles on click
+      for (let i = 0; i < 5; i++) {
+        particlesRef.current.push({
+          x: e.clientX,
+          y: e.clientY,
+          size: Math.random() * 3 + 1,
+          color: '#64ffda',
+          speedX: Math.random() * 2 - 1,
+          speedY: Math.random() * 2 - 1,
+          life: 0.5 + Math.random() * 0.5,
+          opacity: 0.5 + Math.random() * 0.3,
+        });
+      }
+    };
+    
     // Initialize
     resizeCanvas();
     createParticles();
@@ -125,10 +141,12 @@ const ParticleSystem: React.FC = () => {
       createParticles();
     });
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('click', handleClick);
     
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('click', handleClick);
       cancelAnimationFrame(animationFrameRef.current);
     };
   }, []);

@@ -56,39 +56,39 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     >
       {/* Date */}
       <div className="text-right">
-        <span className="caption text-muted-foreground">{date}</span>
+        <span className="caption text-[#64ffda]">{date}</span>
       </div>
       
       {/* Content */}
       <div className="relative pb-10">
         {/* Timeline line */}
         {!isLast && (
-          <div className="absolute top-3 left-[-20px] md:left-[-35px] w-[1px] h-full bg-border" />
+          <div className="absolute top-3 left-[-20px] md:left-[-35px] w-[1px] h-full bg-[#64ffda]/30" />
         )}
         
         {/* Timeline dot */}
         <div className={cn(
           "absolute top-[10px] left-[-24px] md:left-[-39px] h-[9px] w-[9px] rounded-full",
-          "border-2 border-accent bg-background",
+          "border-2 border-[#64ffda] bg-[#0a192f]",
           isVisible && "animate-pulse"
         )} />
         
         {/* Content */}
         <div className={cn(
-          "glass-card p-6 transform",
+          "bg-[#495670]/20 p-6 rounded-lg border-l-2 border-[#64ffda] transform",
           isVisible ? "translate-x-0" : "translate-x-10",
           "transition-transform duration-700 ease-out",
         )}
           style={{ 
             transitionDelay: `${(index * 200) + 200}ms`,
             boxShadow: isVisible 
-              ? "0 0 0 1px rgba(100, 150, 220, 0.3), 0 4px 20px -2px rgba(100, 150, 220, 0.1)" 
+              ? "0 0 20px rgba(100, 255, 218, 0.1)" 
               : "none"
           }}
         >
           <h3 className="heading-sm mb-1">{title}</h3>
-          <h4 className="text-lg font-medium text-accent mb-3">{company}</h4>
-          <p className="text-muted-foreground">{description}</p>
+          <h4 className="text-lg font-medium text-[#64ffda] mb-3">{company}</h4>
+          <p className="text-[#ccd6f6]/80">{description}</p>
         </div>
       </div>
     </div>
