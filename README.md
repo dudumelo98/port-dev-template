@@ -1,90 +1,57 @@
 
-# Portfólio de Duilio Melo - Gestor em Tecnologia da Informação
+# Duilio Melo - Portfólio Profissional
 
-Este projeto é um portfólio profissional moderno para Duilio Melo, especializado na intersecção entre tecnologia e educação.
+Um portfólio interativo para Duilio Melo, profissional na intersecção entre tecnologia e educação, desenvolvido com React, TypeScript e Tailwind CSS.
 
-## 📋 Visão Geral
+## Como baixar e executar o projeto
 
-O portfólio destaca a experiência profissional, competências e realizações de Duilio Melo no campo da tecnologia educacional, utilizando uma interface moderna e responsiva com animações e transições fluidas.
+### Pré-requisitos
+- Node.js (versão 14 ou superior)
+- npm ou yarn
 
-## 🚀 Tecnologias Utilizadas
+### Passos para download e execução
 
-- **React + TypeScript**: Para a estrutura principal da aplicação
-- **Tailwind CSS**: Para estilização e design responsivo
-- **Framer Motion**: Para animações e transições
-- **Lucide React**: Para ícones
+1. **Baixe o projeto**
+   - Clique no botão "Code" no topo da página do repositório
+   - Selecione "Download ZIP"
+   - Extraia o arquivo ZIP para uma pasta em seu computador
 
-## 💻 Como Abrir no Visual Studio Code
+2. **Instale as dependências**
+   Abra um terminal na pasta do projeto e execute:
+   ```
+   npm install
+   # ou, se você usa yarn
+   yarn
+   ```
 
-### Opção 1: Clonar o Repositório
+3. **Execute o projeto localmente**
+   ```
+   npm run dev
+   # ou
+   yarn dev
+   ```
 
-1. Abra o terminal e navegue até o diretório onde deseja salvar o projeto
-2. Clone o repositório usando Git:
-```bash
-git clone <url-do-repositorio>
-```
-3. Navegue até a pasta do projeto:
-```bash
-cd portfolio-duilio-melo
-```
-4. Abra o Visual Studio Code nesta pasta:
-```bash
-code .
-```
+4. **Acesse o site**
+   Abra seu navegador e acesse: `http://localhost:5173`
 
-### Opção 2: Abrir Pasta Existente
+## Estrutura do projeto
 
-1. Abra o Visual Studio Code
-2. Clique em "File" > "Open Folder" (ou pressione Ctrl+K Ctrl+O)
-3. Navegue até a pasta do projeto e selecione-a
-4. Clique em "Open"
+O projeto está organizado da seguinte forma:
 
-## 🔧 Executando o Projeto
-
-1. Instale as dependências:
-```bash
-npm install
-# ou
-yarn install
-```
-
-2. Execute o projeto em modo de desenvolvimento:
-```bash
-npm run dev
-# ou
-yarn dev
-```
-
-3. Acesse o projeto no navegador:
-```
-http://localhost:5173
-```
-
-## 📁 Estrutura do Projeto
-
-- `/public` - Arquivos estáticos e imagens
-- `/src` - Código fonte do projeto
-  - `/components` - Componentes reutilizáveis da UI
-  - `/pages` - Páginas principais da aplicação
-  - `/lib` - Funções utilitárias
+- `/src` - Código fonte principal
+  - `/components` - Componentes React reutilizáveis
+  - `/pages` - Páginas da aplicação
+  - `/lib` - Utilitários e funções auxiliares
   - `/hooks` - Custom React hooks
 
-## 📱 Responsividade
+## Tecnologias utilizadas
 
-O portfólio é totalmente responsivo, adaptando-se a diferentes tamanhos de tela (desktop, tablet e mobile).
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion (animações)
+- Lucide React (ícones)
 
-## 📬 Contato
+## Licença
 
-Para mais informações, entre em contato através do e-mail: dudumelo@gmail.com
-
-## 🔧 Customização
-
-Para personalizar o portfólio:
-
-1. Edite as informações pessoais e profissionais em `src/pages/Index.tsx`
-2. Substitua a imagem de perfil em `public/profile-photo.png`
-3. Ajuste as cores e estilos em `src/index.css`
-
----
-
-Criado com ❤️ usando React, TypeScript e Tailwind CSS.
+Este projeto está licenciado sob a licença MIT.

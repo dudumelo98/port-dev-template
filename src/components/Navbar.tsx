@@ -39,13 +39,13 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo - removed the text "Portfolio" */}
         <Link 
           to="/" 
           className="text-xl font-semibold tracking-tight"
-          aria-label="Portfolio Home"
+          aria-label="Home"
         >
-          Portfolio
+          {/* Intentionally left empty to remove "Portfolio" text */}
         </Link>
         
         {/* Desktop Navigation */}

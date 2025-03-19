@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -187,13 +188,13 @@ const Index: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 md:pr-8"
           >
-            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#64ffda] to-[#64daff] uppercase font-sans">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#64ffda] to-[#64daff] uppercase font-sans">
               Duilio Melo
             </h1>
-            <h2 className="text-xl md:text-2xl mb-4 text-[#64ffda]">
+            <h2 className="text-2xl md:text-3xl mb-6 text-[#64ffda]">
               Gestor em Tecnologia da Informação
             </h2>
-            <div className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl">
+            <div className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               <p className="mb-4">
                 Profissional na intersecção entre tecnologia e educação, com 7+ anos liderando projetos que transformam realidades escolares por meio da inovação digital.
               </p>
@@ -222,11 +223,11 @@ const Index: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="flex-1 flex justify-center mt-10 md:mt-0"
+            className="flex-1 flex justify-center mt-12 md:mt-0"
           >
-            <div className="relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+            <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
-                src="/lovable-uploads/792c4e2a-c785-46f9-bd44-5f7f983886a2.png"
+                src="/lovable-uploads/f7c14f98-6507-4721-973c-fa12f4cda16b.png"
                 alt="Duilio Melo"
                 aspectRatio="square"
                 className="w-full h-full object-cover"
@@ -533,4 +534,3 @@ const Index: React.FC = () => {
 };
 
 export default Index;
-
