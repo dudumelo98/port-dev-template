@@ -5,21 +5,25 @@ import {
   Code, 
   Briefcase, 
   Layout, 
-  Database, 
   Github, 
   Linkedin, 
   Mail,
-  Layers,
-  CloudCog,
   GraduationCap,
   Users,
-  LightbulbIcon,
   Sparkles,
   BookOpen,
   FileCode,
   PaintBucket,
   Globe,
-  Boxes
+  Boxes,
+  Award,
+  TrendingUp,
+  Lightbulb,
+  Medal,
+  CheckCircle2,
+  Clipboard,
+  BuildingLibrary,
+  Target
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ParticleSystem from '@/components/ParticleSystem';
@@ -27,6 +31,10 @@ import SkillCard from '@/components/SkillCard';
 import TimelineItem from '@/components/TimelineItem';
 import ContactLink from '@/components/ContactLink';
 import SmoothImage from '@/components/SmoothImage';
+import ResumeSection from '@/components/ResumeSection';
+import TechnicalSkill from '@/components/TechnicalSkill';
+import Achievement from '@/components/Achievement';
+import KeyCompetency from '@/components/KeyCompetency';
 
 const Index: React.FC = () => {
   useEffect(() => {
@@ -55,69 +63,117 @@ const Index: React.FC = () => {
   
   const experienceData = [
     {
-      date: '2024 - Atual | 2 anos',
-      title: 'Especialista em Inovação Educacional',
+      date: '2024 - Atual',
+      title: 'Especialista em Tecnologia Educacional',
       company: 'Escolas Municipais ETI',
       description: [
-        'Liderança de projetos pedagógicos digitais impactando +1.6k alunos',
-        'Capacitação de 120+ professores em metodologias ágeis de ensino híbrido',
-        'Desenvolvimento de plataforma de aprendizagem adaptativa (aumento de 40% no engajamento discente)',
-        'Parcerias estratégicas com EdTechs para modernização de infraestrutura tecnológica'
+        'Desenvolvimento de Plataformas Interativas: Utilizei HTML5 e CSS3 (Grid, Flexbox, animações) para criar ambientes virtuais de aprendizagem, aumentando em 35% a participação em atividades extracurriculares.',
+        'UI/UX para Educação: Apliquei princípios de acessibilidade e design responsivo (Figma) em interfaces usadas por 2.500+ alunos, reduzindo o tempo de navegação em 20%.',
+        'JavaScript para Engajamento: Implementei quizzes dinâmicos e gamificação (via JavaScript ES6+), elevando a retenção de conteúdo em 40% em escolas parceiras.',
+        'Capacitação Docente: Treinei 90+ professores em ferramentas digitais, com workshops práticos em Python para análise de desempenho estudantil.'
       ]
     },
     {
-      date: '2018 - 2025 | 7 anos',
-      title: 'Coordenador de Operações Acadêmicas',
-      company: 'Universidade Estadual do Maranhão',
+      date: '2018 - 2025',
+      title: 'Coordenador de Polo Tecnológico',
+      company: 'Universidade Estadual do Maranhão (UEMA)',
       description: [
-        'Gestão de polo educacional com excelência operacional (98% de satisfação discente)',
-        'Transformação digital de ecossistemas educacionais',
-        'Gestão de operações acadêmicas de alta complexidade',
-        'Desenvolvimento de soluções pedagógicas escaláveis'
+        'Sistemas Web para Comunidades Rurais: Desenvolvi plataformas de gestão escolar com Python (Django), beneficiando 15 polos educacionais e simplificando processos administrativos em 60%.',
+        'CSS para Materiais Didáticos: Criei templates responsivos para cursos EAD, adotados por 1.200+ alunos como material de apoio oficial.',
+        'Parcerias Estratégicas: Estabeleci colaborações com 8 ONGs para workshops de programação básica (HTML/JS), impactando 500+ jovens em zonas remotas.',
+        'Figma na Educação: Prototipei interfaces de um sistema de monitoramento acadêmico, adotado como modelo estadual em 2023.'
       ]
     }
   ];
   
-  const skillsData = [
+  const keyCompetencies = [
     {
       title: 'Gestão de Projetos Educacionais',
-      description: 'Capacidade de liderar e coordenar iniciativas educacionais com excelência operacional',
-      icon: <GraduationCap size={36} />,
-      tags: ['Planejamento', 'Execução', 'Monitoramento', 'Avaliação']
+      icon: <Clipboard size={36} />
     },
     {
-      title: 'Inovação e Integração Tecnológica',
-      description: 'Implementação de soluções digitais para melhorar processos educacionais',
-      icon: <Sparkles size={36} />,
-      tags: ['EdTech', 'Transformação Digital', 'Automação', 'Análise de Dados']
+      title: 'Integração de Tecnologia em Sala de Aula',
+      icon: <Layout size={36} />
     },
     {
-      title: 'Colaboração e Parcerias',
-      description: 'Criação de alianças estratégicas para potencializar resultados educacionais',
-      icon: <Users size={36} />,
-      tags: ['Networking', 'Parcerias', 'Colaboração', 'Comunicação']
+      title: 'Desenvolvimento de Plataformas Educacionais',
+      icon: <Code size={36} />
     },
     {
-      title: 'Desenvolvimento Web',
-      description: 'Criação de plataformas educacionais e sistemas de aprendizagem',
-      icon: <Code size={36} />,
-      tags: ['HTML', 'CSS', 'JavaScript', 'Python']
+      title: 'Design Instrucional com Figma',
+      icon: <Boxes size={36} />
     },
     {
-      title: 'Formação e Capacitação',
-      description: 'Treinamento e desenvolvimento de educadores em metodologias inovadoras',
-      icon: <BookOpen size={36} />,
-      tags: ['Workshops', 'Mentoria', 'Treinamentos', 'Feedback']
+      title: 'Capacitação de Equipes para Transformação Digital',
+      icon: <Users size={36} />
+    },
+    {
+      title: 'Parcerias Interinstitucionais',
+      icon: <BuildingLibrary size={36} />
     }
   ];
 
-  const technicalSkills = [
-    { name: 'Estrutura HTML', icon: <FileCode size={20} /> },
-    { name: 'Técnicas de estilo CSS', icon: <PaintBucket size={20} /> },
-    { name: 'Funcionalidade JavaScript', icon: <Code size={20} /> },
-    { name: 'Python para desenvolvimento web', icon: <Globe size={20} /> },
-    { name: 'Princípios de UI/UX', icon: <Layout size={20} /> },
-    { name: 'Figma', icon: <Boxes size={20} /> }
+  const frontEndSkills = [
+    { name: 'HTML5 Semântico', icon: <FileCode size={20} /> },
+    { name: 'CSS3 (SASS, Animations)', icon: <PaintBucket size={20} /> },
+    { name: 'JavaScript (React Basics)', icon: <Code size={20} /> },
+    { name: 'Python (Automação Web)', icon: <Globe size={20} /> }
+  ];
+
+  const designSkills = [
+    { name: 'Figma (Design Systems)', icon: <Boxes size={20} /> },
+    { name: 'Testes de Usabilidade', icon: <Target size={20} /> },
+    { name: 'Wireframes Interativos', icon: <Layout size={20} /> },
+    { name: 'Princípios WCAG', icon: <CheckCircle2 size={20} /> }
+  ];
+
+  const managementSkills = [
+    { name: 'Metodologias Ágeis (Scrum/Kanban)', icon: <Sparkles size={20} /> },
+    { name: 'PMI para Projetos Educacionais', icon: <Clipboard size={20} /> },
+    { name: 'Trello/Asana', icon: <BookOpen size={20} /> },
+    { name: 'Capacitação em Ferramentas Digitais', icon: <Users size={20} /> }
+  ];
+
+  const achievements = [
+    {
+      title: 'Prêmio Inovação Educacional 2024',
+      description: 'Pela plataforma "Aula Dinâmica" (integração de HTML/CSS/JS), adotada em 12 escolas públicas.',
+      icon: <Award size={32} />
+    },
+    {
+      title: '+70% de Eficiência Operacional',
+      description: 'Redesign de sistemas administrativos com Python/Django na UEMA, liberando 15h/mês para equipes pedagógicas.',
+      icon: <TrendingUp size={32} />
+    },
+    {
+      title: 'Prototipagem que virou política pública',
+      description: 'Modelos de UI/UX criados no Figma hoje são parte do padrão do MEC para EAD.',
+      icon: <Medal size={32} />
+    }
+  ];
+
+  const whyHireMe = [
+    {
+      title: 'Tecnologia com Propósito',
+      description: 'Não crio "ferramentas", mas experiências educacionais que resolvem problemas reais (ex.: evasão escolar, desinteresse).',
+      icon: <Lightbulb size={24} />
+    },
+    {
+      title: 'Ponte entre Saberes',
+      description: 'Traduzo linguagens técnicas para educadores e necessidades pedagógicas para desenvolvedores.',
+      icon: <Briefcase size={24} />
+    },
+    {
+      title: 'Resultados Mensuráveis',
+      description: 'Todo projeto inclui métricas de impacto (tempo economizado, engajamento, redução de custos).',
+      icon: <Target size={24} />
+    }
+  ];
+
+  const formation = [
+    'Pós-Graduação em Design Instrucional (cursando)',
+    'Certificação em UX para Educação (Interaction Design Foundation)',
+    'Curso Avançado de Figma (Design + Prototipagem)'
   ];
   
   return (
@@ -132,15 +188,20 @@ const Index: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 md:pr-8"
           >
-            <h1 className="text-3xl md:text-4xl font-bold tracking-wide mb-4 font-mono text-[#64ffda] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#64ffda] to-[#64daff] font-sans">
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#64ffda] to-[#64daff] uppercase font-sans">
               Duilio Melo
             </h1>
             <h2 className="text-xl md:text-2xl mb-4 text-[#64ffda]">
               Gestor em Tecnologia da Informação
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
-              Profissional na intersecção entre tecnologia e educação com comprovada expertise em transformação digital de ecossistemas educacionais
-            </p>
+            <div className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl">
+              <p className="mb-4">
+                Profissional na intersecção entre tecnologia e educação, com 7+ anos liderando projetos que transformam realidades escolares por meio da inovação digital.
+              </p>
+              <p>
+                Combino expertise em desenvolvimento web com uma visão pedagógica para criar ferramentas que simplificam o aprendizado, capacitam educadores e engajam estudantes.
+              </p>
+            </div>
             
             <div className="flex flex-wrap gap-4 mt-8">
               <a 
@@ -164,7 +225,7 @@ const Index: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="flex-1 flex justify-center mt-10 md:mt-0"
           >
-            <div className="relative w-[180px] h-[180px] md:w-[250px] md:h-[250px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+            <div className="relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
                 src="/lovable-uploads/792c4e2a-c785-46f9-bd44-5f7f983886a2.png"
                 alt="Duilio Melo"
@@ -175,77 +236,40 @@ const Index: React.FC = () => {
           </motion.div>
         </div>
       </section>
-      
-      <section id="skills" className="py-20 relative">
-        <div className="section-container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="mb-16 text-center"
-          >
-            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Competências</p>
-            <h2 className="heading-lg mb-6">Competências Destacadas</h2>
-            <p className="text-[#ccd6f6]/80 max-w-2xl mx-auto">
-              Combinando experiência em educação e tecnologia para criar soluções inovadoras
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillsData.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <SkillCard
-                  title={skill.title}
-                  description={skill.description}
-                  icon={skill.icon}
-                  tags={skill.tags}
-                  className="bg-[#495670]/20 hover:border-[#64ffda]/30 border border-transparent"
-                />
-              </motion.div>
-            ))}
-          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="mt-20"
-          >
-            <h3 className="heading-sm mb-6 text-center">Conhecimentos Técnicos</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              {technicalSkills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, width: 0 }}
-                  whileInView={{ opacity: 1, width: "100%" }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className="w-full"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[#64ffda]">{skill.icon}</span>
-                    <span className="text-[#ccd6f6]">{skill.name}</span>
-                  </div>
-                  <div className="w-full bg-[#495670]/30 h-2 rounded-full overflow-hidden">
-                    <div 
-                      className="bg-[#64ffda] h-full rounded-full" 
-                      style={{ width: '80%' }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+      <ResumeSection 
+        id="resume" 
+        title="Resumo Estratégico" 
+        subtitle="Minha trajetória profissional"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="bg-[#495670]/20 p-6 rounded-lg border-l-2 border-[#64ffda] max-w-4xl mx-auto"
+        >
+          <p className="text-[#ccd6f6] mb-4">
+            Minha trajetória reflete a capacidade de traduzir códigos em soluções educacionais acessíveis, intuitivas e escaláveis.
+          </p>
+          <p className="text-[#ccd6f6]/80 italic">
+            <span className="text-[#64ffda]">✨ Diferencial Único:</span> Minha codificação tem DNA pedagógico – cada linha de HTML, CSS ou Python é escrita para descomplicar, nunca para intimidar. Afinal, tecnologia na educação só é revolucionária quando é acessível.
+          </p>
+        </motion.div>
+      </ResumeSection>
+
+      <ResumeSection id="competencies" title="Competências-Chave">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {keyCompetencies.map((competency, index) => (
+            <KeyCompetency 
+              key={index}
+              title={competency.title}
+              icon={competency.icon}
+              index={index}
+            />
+          ))}
         </div>
-      </section>
+      </ResumeSection>
       
       <section id="experience" className="py-20 relative">
         <div className="section-container">
@@ -257,7 +281,7 @@ const Index: React.FC = () => {
             className="mb-16"
           >
             <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Carreira</p>
-            <h2 className="heading-lg mb-6">Experiência Profissional</h2>
+            <h2 className="heading-lg mb-6">Experiência Relevante</h2>
             <p className="text-[#ccd6f6]/80 max-w-2xl">
               Trajetória profissional focada na interseção entre educação e tecnologia, 
               desenvolvendo soluções inovadoras para ambientes de aprendizagem.
@@ -287,6 +311,152 @@ const Index: React.FC = () => {
         </div>
       </section>
       
+      <section id="skills" className="py-20 relative bg-[#495670]/10">
+        <div className="section-container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="mb-16 text-center"
+          >
+            <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Expertise</p>
+            <h2 className="heading-lg mb-6">Habilidades Técnicas</h2>
+            <p className="text-[#ccd6f6]/80 max-w-2xl mx-auto">
+              Combinando desenvolvimento web, design de interfaces e gestão de projetos educacionais
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-[#0a192f]/80 p-6 rounded-lg border border-[#64ffda]/20 hover:border-[#64ffda]/40 transition-all"
+            >
+              <h3 className="text-xl font-bold text-[#64ffda] mb-6 flex items-center">
+                <Code size={20} className="mr-2" /> Front-End
+              </h3>
+              <div className="space-y-4">
+                {frontEndSkills.map((skill, index) => (
+                  <TechnicalSkill 
+                    key={index} 
+                    name={skill.name} 
+                    icon={skill.icon} 
+                  />
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-[#0a192f]/80 p-6 rounded-lg border border-[#64ffda]/20 hover:border-[#64ffda]/40 transition-all"
+            >
+              <h3 className="text-xl font-bold text-[#64ffda] mb-6 flex items-center">
+                <Boxes size={20} className="mr-2" /> Design & UX
+              </h3>
+              <div className="space-y-4">
+                {designSkills.map((skill, index) => (
+                  <TechnicalSkill 
+                    key={index} 
+                    name={skill.name} 
+                    icon={skill.icon} 
+                  />
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="bg-[#0a192f]/80 p-6 rounded-lg border border-[#64ffda]/20 hover:border-[#64ffda]/40 transition-all"
+            >
+              <h3 className="text-xl font-bold text-[#64ffda] mb-6 flex items-center">
+                <Clipboard size={20} className="mr-2" /> Gestão Educacional
+              </h3>
+              <div className="space-y-4">
+                {managementSkills.map((skill, index) => (
+                  <TechnicalSkill 
+                    key={index} 
+                    name={skill.name} 
+                    icon={skill.icon} 
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <ResumeSection 
+        id="achievements" 
+        title="Realizações em Destaque"
+        subtitle="Projetos e reconhecimentos"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {achievements.map((achievement, index) => (
+            <Achievement 
+              key={index}
+              title={achievement.title}
+              description={achievement.description}
+              icon={achievement.icon}
+              index={index}
+            />
+          ))}
+        </div>
+      </ResumeSection>
+
+      <ResumeSection 
+        id="hire-me" 
+        title="Por Que Me Contratar?"
+        className="bg-[#495670]/10"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {whyHireMe.map((reason, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="bg-[#0a192f] p-6 rounded-lg border border-[#64ffda]/20 hover:border-[#64ffda]/40 transition-all"
+              >
+                <div className="flex justify-center mb-4 text-[#64ffda]">
+                  {reason.icon}
+                </div>
+                <h3 className="text-lg font-bold text-center mb-3">{reason.title}</h3>
+                <p className="text-sm text-center text-[#ccd6f6]/80">{reason.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="mt-12 bg-[#0a192f] p-6 rounded-lg border-l-2 border-[#64ffda]"
+          >
+            <h4 className="text-xl font-semibold mb-4 text-[#64ffda]">Formação Complementar</h4>
+            <ul className="space-y-2">
+              {formation.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-[#64ffda] mr-2">▸</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </ResumeSection>
+      
       <section id="contact" className="py-20 relative">
         <div className="section-container">
           <motion.div
@@ -297,9 +467,9 @@ const Index: React.FC = () => {
             className="mb-16 text-center"
           >
             <p className="text-[#64ffda] uppercase tracking-wider text-sm font-medium mb-3">Conecte-se</p>
-            <h2 className="heading-lg mb-6">Entre em Contato</h2>
-            <p className="text-[#ccd6f6]/80 max-w-md mx-auto">
-              Interessado em colaborar em projetos educacionais inovadores? Entre em contato!
+            <h2 className="heading-lg mb-6">Vamos Transformar a Educação Juntos?</h2>
+            <p className="text-[#ccd6f6]/80 max-w-xl mx-auto mb-6">
+              Disponível para consultorias em integração tecnológica, desenvolvimento de plataformas educacionais e capacitação em ferramentas digitais.
             </p>
           </motion.div>
           

@@ -1,64 +1,83 @@
 
-# Portfólio de Duilio Melo
+# Portfólio de Duilio Melo - Gestor em Tecnologia da Informação
 
-Este projeto é um portfólio profissional moderno para Duilio Melo, Gestor em Tecnologia da Informação.
+Este projeto é um portfólio profissional moderno para Duilio Melo, especializado na intersecção entre tecnologia e educação.
 
-## Tecnologias Utilizadas
+## 📋 Visão Geral
 
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide React (para ícones)
+O portfólio destaca a experiência profissional, competências e realizações de Duilio Melo no campo da tecnologia educacional, utilizando uma interface moderna e responsiva com animações e transições fluidas.
 
-## Como Executar o Projeto
+## 🚀 Tecnologias Utilizadas
 
-### Pré-requisitos
+- **React + TypeScript**: Para a estrutura principal da aplicação
+- **Tailwind CSS**: Para estilização e design responsivo
+- **Framer Motion**: Para animações e transições
+- **Lucide React**: Para ícones
 
-- Node.js (versão 14 ou superior)
-- npm ou yarn
+## 💻 Como Abrir no Visual Studio Code
 
-### Passos para Execução
+### Opção 1: Clonar o Repositório
 
-1. Clone este repositório:
+1. Abra o terminal e navegue até o diretório onde deseja salvar o projeto
+2. Clone o repositório usando Git:
 ```bash
 git clone <url-do-repositorio>
 ```
-
-2. Navegue até a pasta do projeto:
+3. Navegue até a pasta do projeto:
 ```bash
 cd portfolio-duilio-melo
 ```
+4. Abra o Visual Studio Code nesta pasta:
+```bash
+code .
+```
 
-3. Instale as dependências:
+### Opção 2: Abrir Pasta Existente
+
+1. Abra o Visual Studio Code
+2. Clique em "File" > "Open Folder" (ou pressione Ctrl+K Ctrl+O)
+3. Navegue até a pasta do projeto e selecione-a
+4. Clique em "Open"
+
+## 🔧 Executando o Projeto
+
+1. Instale as dependências:
 ```bash
 npm install
 # ou
 yarn install
 ```
 
-4. Execute o projeto em modo de desenvolvimento:
+2. Execute o projeto em modo de desenvolvimento:
 ```bash
 npm run dev
 # ou
 yarn dev
 ```
 
-5. Acesse o projeto no navegador:
+3. Acesse o projeto no navegador:
 ```
 http://localhost:5173
 ```
 
-## Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-- `/public` - Arquivos estáticos como imagens
+- `/public` - Arquivos estáticos e imagens
 - `/src` - Código fonte do projeto
-  - `/components` - Componentes reutilizáveis
-  - `/pages` - Páginas do aplicativo
+  - `/components` - Componentes reutilizáveis da UI
+  - `/pages` - Páginas principais da aplicação
   - `/lib` - Funções utilitárias
   - `/hooks` - Custom React hooks
 
-## Customização
+## 📱 Responsividade
+
+O portfólio é totalmente responsivo, adaptando-se a diferentes tamanhos de tela (desktop, tablet e mobile).
+
+## 📬 Contato
+
+Para mais informações, entre em contato através do e-mail: dudumelo@gmail.com
+
+## 🔧 Customização
 
 Para personalizar o portfólio:
 
@@ -66,15 +85,6 @@ Para personalizar o portfólio:
 2. Substitua a imagem de perfil em `public/profile-photo.png`
 3. Ajuste as cores e estilos em `src/index.css`
 
-## Implantação
+---
 
-O projeto pode ser facilmente implantado em plataformas como:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Firebase Hosting
-
-## Contato
-
-Para mais informações, entre em contato através do e-mail: dudumelo@gmail.com
+Criado com ❤️ usando React, TypeScript e Tailwind CSS.
