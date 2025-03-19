@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -171,8 +170,7 @@ const Index: React.FC = () => {
   ];
 
   const formation = [
-    'Pós-Graduação em Design Instrucional (cursando)',
-    'Certificação em UX para Educação (Interaction Design Foundation)',
+    'Designer Web e Mobile Completo: UI/UX, Figma',
     'Curso Avançado de Figma (Design + Prototipagem)',
     'Curso de Excel do Básico ao Avançado, Macro e VBA + Power BI',
     'Estruturas de Dados e Algoritmos Python + Exercícios LEETCODE',
@@ -538,4 +536,3 @@ const Index: React.FC = () => {
 };
 
 export default Index;
-
