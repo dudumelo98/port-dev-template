@@ -173,7 +173,11 @@ const Index: React.FC = () => {
   const formation = [
     'Pós-Graduação em Design Instrucional (cursando)',
     'Certificação em UX para Educação (Interaction Design Foundation)',
-    'Curso Avançado de Figma (Design + Prototipagem)'
+    'Curso Avançado de Figma (Design + Prototipagem)',
+    'Curso de Excel do Básico ao Avançado, Macro e VBA + Power BI',
+    'Estruturas de Dados e Algoritmos Python + Exercícios LEETCODE',
+    'Prompt Completo de Engenharia para Bootcamp de IA (2025)',
+    'IA Generativa e Large Language Models (LLMs) na Prática'
   ];
   
   return (
@@ -194,7 +198,7 @@ const Index: React.FC = () => {
             <h2 className="text-2xl md:text-3xl mb-6 text-[#64ffda]">
               Gestor em Tecnologia da Informação
             </h2>
-            <div className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+            <div className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               <p className="mb-4">
                 Profissional na intersecção entre tecnologia e educação, com 7+ anos liderando projetos que transformam realidades escolares por meio da inovação digital.
               </p>
@@ -225,7 +229,7 @@ const Index: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="flex-1 flex justify-center mt-12 md:mt-0"
           >
-            <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
                 src="/lovable-uploads/f7c14f98-6507-4721-973c-fa12f4cda16b.png"
                 alt="Duilio Melo"
@@ -534,3 +538,4 @@ const Index: React.FC = () => {
 };
 
 export default Index;
+
