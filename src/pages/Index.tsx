@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -22,7 +21,7 @@ import {
   Medal,
   CheckCircle2,
   Clipboard,
-  BuildingLibrary,
+  Building,
   Target
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -109,7 +108,7 @@ const Index: React.FC = () => {
     },
     {
       title: 'Parcerias Interinstitucionais',
-      icon: <BuildingLibrary size={36} />
+      icon: <Building size={36} />
     }
   ];
 
@@ -534,3 +533,4 @@ const Index: React.FC = () => {
 };
 
 export default Index;
+
