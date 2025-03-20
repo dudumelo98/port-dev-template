@@ -23,7 +23,7 @@ import {
   Clipboard,
   Building,
   Target,
-  Tool
+  Wrench
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ParticleSystem from '@/components/ParticleSystem';
@@ -538,7 +538,7 @@ const Index: React.FC = () => {
           transition={{ duration: 0.3, delay: 0.4 }}
           className="w-12 h-12 rounded-full bg-[#64ffda] text-[#0a192f] flex items-center justify-center hover:scale-110 transition-transform duration-300"
         >
-          <Tool size={20} />
+          <Wrench size={20} />
         </motion.a>
       </div>
     </div>

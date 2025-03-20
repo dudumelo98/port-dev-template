@@ -52,6 +52,12 @@ O projeto está organizado da seguinte forma:
 - Framer Motion (animações)
 - Lucide React (ícones)
 
+## Contato
+
+- Email: dudumelo723@gmail.com
+- GitHub: https://github.com/dudumelo98
+- LinkedIn: https://linkedin.com/
+
 ## Licença
 
 Este projeto está licenciado sob a licença MIT.
