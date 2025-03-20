@@ -22,7 +22,8 @@ import {
   CheckCircle2,
   Clipboard,
   Building,
-  Target
+  Target,
+  Tool
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ParticleSystem from '@/components/ParticleSystem';
@@ -135,18 +136,18 @@ const Index: React.FC = () => {
 
   const achievements = [
     {
-      title: 'Prêmio Inovação Educacional 2024',
-      description: 'Pela plataforma "Aula Dinâmica" (integração de HTML/CSS/JS), adotada em 12 escolas públicas.',
-      icon: <Award size={32} />
+      title: 'Prêmio Inovação em Educação Digital 2024',
+      description: 'Pela plataforma "Aula Dinâmica" integrando tecnologias web para escolas públicas e transformando a experiência de aprendizado.',
+      icon: <GraduationCap size={32} />
     },
     {
-      title: '+70% de Eficiência Operacional',
-      description: 'Redesign de sistemas administrativos com Python/Django na UEMA, liberando 15h/mês para equipes pedagógicas.',
-      icon: <TrendingUp size={32} />
+      title: 'Transformação de Processos Pedagógicos',
+      description: 'Redesign de sistemas administrativos com foco em ferramentas educacionais que liberam mais tempo para atividades pedagógicas.',
+      icon: <BookOpen size={32} />
     },
     {
-      title: 'Prototipagem que virou política pública',
-      description: 'Modelos de UI/UX criados no Figma hoje são parte do padrão do MEC para EAD.',
+      title: 'Pioneirismo em Design Educacional',
+      description: 'Desenvolvimento de protótipos de interfaces de aprendizado que se tornaram referência para plataformas educacionais.',
       icon: <Medal size={32} />
     }
   ];
@@ -196,7 +197,7 @@ const Index: React.FC = () => {
             <h2 className="text-2xl md:text-3xl mb-6 text-[#64ffda]">
               Gestor em Tecnologia da Informação
             </h2>
-            <div className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
+            <div className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               <p className="mb-4">
                 Profissional na intersecção entre tecnologia e educação, com 7+ anos liderando projetos que transformam realidades escolares por meio da inovação digital.
               </p>
@@ -227,7 +228,7 @@ const Index: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="flex-1 flex justify-center mt-12 md:mt-0"
           >
-            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
+            <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
                 src="/lovable-uploads/f7c14f98-6507-4721-973c-fa12f4cda16b.png"
                 alt="Duilio Melo"
@@ -477,13 +478,13 @@ const Index: React.FC = () => {
           
           <div className="flex flex-col items-center gap-4 max-w-md mx-auto">
             <ContactLink 
-              href="mailto:dudumelo@gmail.com" 
+              href="mailto:dudumelo723@gmail.com" 
               icon={<Mail size={20} />} 
-              label="dudumelo@gmail.com"
+              label="dudumelo723@gmail.com"
               className="border border-[#64ffda]/20 hover:border-[#64ffda] text-[#64ffda]"
             />
             <ContactLink 
-              href="https://github.com/" 
+              href="https://github.com/dudumelo98" 
               icon={<Github size={20} />} 
               label="GitHub"
               className="border border-[#64ffda]/20 hover:border-[#64ffda] text-[#64ffda]"
@@ -500,7 +501,7 @@ const Index: React.FC = () => {
       
       <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
         <motion.a
-          href="mailto:dudumelo@gmail.com"
+          href="mailto:dudumelo723@gmail.com"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
@@ -509,7 +510,7 @@ const Index: React.FC = () => {
           <Mail size={20} />
         </motion.a>
         <motion.a
-          href="https://github.com/"
+          href="https://github.com/dudumelo98"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
@@ -529,6 +530,15 @@ const Index: React.FC = () => {
           className="w-12 h-12 rounded-full bg-[#64ffda] text-[#0a192f] flex items-center justify-center hover:scale-110 transition-transform duration-300"
         >
           <Linkedin size={20} />
+        </motion.a>
+        <motion.a
+          href="#"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.4 }}
+          className="w-12 h-12 rounded-full bg-[#64ffda] text-[#0a192f] flex items-center justify-center hover:scale-110 transition-transform duration-300"
+        >
+          <Tool size={20} />
         </motion.a>
       </div>
     </div>
