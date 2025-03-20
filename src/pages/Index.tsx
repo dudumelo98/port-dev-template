@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -230,7 +231,7 @@ const Index: React.FC = () => {
           >
             <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px] rounded-full border-4 border-[#64ffda] overflow-hidden animate-float">
               <SmoothImage
-                src="/lovable-uploads/f7c14f98-6507-4721-973c-fa12f4cda16b.png"
+                src="/lovable-uploads/391bbd2b-dabb-43d0-8e3a-59240d45341f.png"
                 alt="Duilio Melo"
                 aspectRatio="square"
                 className="w-full h-full object-cover"
